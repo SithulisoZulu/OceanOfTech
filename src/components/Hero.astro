@@ -1,0 +1,226 @@
+---
+import NavBar from "./NavBar.astro";
+import { SITE_NAME } from '../constants';
+---
+
+<!-- Hero -->
+<div class="relative overflow-hidden before:absolute before:top-0 before:start-1/2 before:bg-[url('https://preline.co/assets/svg/examples/polygon-bg-element.svg')] before:bg-no-repeat before:bg-top before:bg-cover before:w-full before:h-full before:-z-[1] before:transform before:-translate-x-1/2 dark:before:bg-[url('https://preline.co/assets/svg/examples/polygon-bg-element-dark.svg')]">
+    <NavBar />
+    <div class="mt-0 p-0 lg:mt-9 lg:p-4"></div>
+    <div class="md:mt-24 max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-10">
+      <!-- Announcement Banner -->
+      <div class="flex justify-center">
+        <a class="inline-flex items-center gap-x-2 bg-white border border-gray-200 text-sm text-gray-800 p-1 ps-3 rounded-full transition hover:border-gray-300 dark:bg-gray-800 dark:border-gray-700 dark:hover:border-gray-600 dark:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">
+          PRO release - Join to waitlist
+          <span class="py-1.5 px-2.5 inline-flex justify-center items-center gap-x-2 rounded-full bg-gray-200 font-semibold text-sm text-gray-600 dark:bg-gray-700 dark:text-gray-400">
+            <svg class="flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </span>
+        </a>
+      </div>
+      <!-- End Announcement Banner -->
+  
+      <!-- Title -->
+      <div class="mt-5 max-w-2xl text-center mx-auto">
+        <h1 class="block font-bold text-gray-800 text-4xl md:text-5xl lg:text-6xl dark:text-gray-200">
+          Let's Build
+          <span class="bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent typed">Together</span>
+
+        </h1>
+      </div>
+      <!-- End Title -->
+  
+      <div class="mt-5 max-w-3xl text-center mx-auto">
+        <p class="text-lg text-gray-600 dark:text-gray-400">Elevate your business with <span class="bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent">{SITE_NAME}</span> – leaders in cutting-edge software development. From custom solutions to mobile apps, we deliver excellence. Transform your digital presence with us today!.</p>
+      </div>
+  
+      <!-- Buttons -->
+      <div class="mt-8 gap-3 flex justify-center">
+        <a class="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 hover:from-violet-600 hover:to-blue-600 border border-transparent text-white text-sm font-medium rounded-md focus:outline-none focus:ring-1 focus:ring-gray-600 py-3 px-4 dark:focus:ring-offset-gray-800 w-md" href="#">
+          Get started
+          <svg class="flex-shrink-0 w-4 h-4" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </a>
+        <button type="button" class="relative group p-2 ps-3  items-center gap-x-2 text-sm font-mono rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 hidden">
+          $ npm i preline
+          <span class="flex justify-center items-center bg-gray-200 rounded-md w-7 h-7 dark:bg-gray-700 dark:text-gray-400">
+            <svg class="flex-shrink-0 w-4 h-4 group-hover:rotate-6 transition" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>
+          </span>
+        </button>
+      </div>
+      <!-- End Buttons -->
+  
+      <div class="mt-5 flex justify-center items-center gap-x-1 sm:gap-x-3">
+       <a href="#features" class="animate-bounce"> <i class="fa fa-angle-down cursor-pointer md:mt-20 dark:text-gray-500" aria-hidden="true"></i></a>
+      </div>
+    </div>
+</div>
+<!-- End Hero -->
+
+<script>
+    import Typed from 'typed.js';
+    var typed = new Typed('.typed', {
+  /**
+   * @property {array} strings strings to be typed
+   * @property {string} stringsElement ID of element containing string children
+   */
+  strings: [
+    'Websites', 
+    ' ',
+    'Together',
+    ' ',
+  ],
+ 
+
+  /**
+   * @property {number} typeSpeed type speed in milliseconds
+   */
+  typeSpeed: 80,
+
+  /**
+   * @property {number} startDelay time before typing starts in milliseconds
+   */
+  startDelay: 0,
+
+  /**
+   * @property {number} backSpeed backspacing speed in milliseconds
+   */
+  backSpeed: 80,
+
+  /**
+   * @property {boolean} smartBackspace only backspace what doesn't match the previous string
+   */
+  smartBackspace: true,
+
+  /**
+   * @property {boolean} shuffle shuffle the strings
+   */
+  shuffle: false,
+
+  /**
+   * @property {number} backDelay time before backspacing in milliseconds
+   */
+  backDelay: 700,
+
+  /**
+   * @property {boolean} fadeOut Fade out instead of backspace
+   * @property {string} fadeOutClass css class for fade animation
+   * @property {boolean} fadeOutDelay Fade out delay in milliseconds
+   */
+  fadeOut: false,
+  fadeOutClass: 'typed-fade-out',
+  fadeOutDelay: 500,
+
+  /**
+   * @property {boolean} loop loop strings
+   * @property {number} loopCount amount of loops
+   */
+  loop: true,
+  loopCount: Infinity,
+
+  /**
+   * @property {boolean} showCursor show cursor
+   * @property {string} cursorChar character for cursor
+   * @property {boolean} autoInsertCss insert CSS for cursor and fadeOut into HTML <head>
+   */
+  showCursor: false,
+  cursorChar: '|',
+  autoInsertCss: true,
+
+  /**
+   * @property {string} attr attribute for typing
+   * Ex: input placeholder, value, or just HTML text
+   */
+
+
+  /**
+   * @property {boolean} bindInputFocusEvents bind to focus and blur if el is text input
+   */
+  bindInputFocusEvents: false,
+
+  /**
+   * @property {string} contentType 'html' or 'null' for plaintext
+   */
+  contentType: 'html',
+
+  /**
+   * Before it begins typing
+   * @param {Typed} self
+   */
+  onBegin: (self) => {},
+
+  /**
+   * All typing is complete
+   * @param {Typed} self
+   */
+  onComplete: (self) => {},
+
+  /**
+   * Before each string is typed
+   * @param {number} arrayPos
+   * @param {Typed} self
+   */
+  preStringTyped: (arrayPos, self) => {},
+
+  /**
+   * After each string is typed
+   * @param {number} arrayPos
+   * @param {Typed} self
+   */
+  onStringTyped: (arrayPos, self) => {},
+
+  /**
+   * During looping, after last string is typed
+   * @param {Typed} self
+   */
+  onLastStringBackspaced: (self) => {},
+
+  /**
+   * Typing has been stopped
+   * @param {number} arrayPos
+   * @param {Typed} self
+   */
+  onTypingPaused: (arrayPos, self) => {},
+
+  /**
+   * Typing has been started after being stopped
+   * @param {number} arrayPos
+   * @param {Typed} self
+   */
+  onTypingResumed: (arrayPos, self) => {},
+
+  /**
+   * After reset
+   * @param {Typed} self
+   */
+  onReset: (self) => {},
+
+  /**
+   * After stop
+   * @param {number} arrayPos
+   * @param {Typed} self
+   */
+  onStop: (arrayPos, self) => {},
+
+  /**
+   * After start
+   * @param {number} arrayPos
+   * @param {Typed} self
+   */
+  onStart: (arrayPos, self) => {},
+
+  /**
+   * After destroy
+   * @param {Typed} self
+   */
+  onDestroy: (self) => {}
+});
+</script>
+
+<style>
+    /* Cursor */
+.typed-cursor {
+    color: #1e40af;
+    background-color: #1e40af;
+}
+</style>

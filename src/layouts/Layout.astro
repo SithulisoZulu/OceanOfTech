@@ -1,0 +1,73 @@
+---
+import { SITE_NAME } from '../constants';
+import { SITE_DESCRIPTION } from '../constants';
+import Cookies from '../components/cookies.astro'
+import Footer from '../components/Footer.astro';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={SITE_DESCRIPTION}/>
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{SITE_NAME} - {title}</title>
+
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	</head>
+	<body class="dark:bg-[#13151a]">
+		<slot />
+		<Footer />
+		<Cookies />
+		<i class="fixed fas fa-arrow-up bg-blue-300 text-blue-500 bg-opacity-25 fw-bold p-3 rounded-md max-w-10 cursor-pointer bottom-10 end-10 z-[60] me-15 transition-all ease-in-out duration-75 hidden" id="btn-back-to-top" style="display: none;"></i>
+		<script src="../../node_modules/preline/dist/preline.js"></script>
+	</body>
+</html>
+
+<style is:global>
+	html {
+		scroll-behavior: smooth;
+	}
+</style>
+
+<script>
+	//Get the button
+let mybutton = document.getElementById("btn-back-to-top");
+
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 20 ||
+    document.documentElement.scrollTop > 20
+  ) {
+	if(mybutton){
+    mybutton.style.display = "block"
+	}
+  } else {
+	if(mybutton){
+    mybutton.style.display = "none"
+	}
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton?.addEventListener("click", backToTop);
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
